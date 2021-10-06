@@ -26,7 +26,7 @@ public class Ditherer {
                 }*/
 
                 final VectorRGB current_color = new VectorRGB(img.getRGB(x, y));
-                final VectorRGB closest_match = this.palette.getClosestMatch(current_color);
+                final VectorRGB closest_match = this.palette.getClosestMatch(current_color, img.getRGB(x, y) >> 24 == 0x0);
                 final VectorRGB error = current_color.subtract(closest_match);
 
                 img.setRGB(x, y, closest_match.toRGB());
