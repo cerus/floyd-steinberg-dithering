@@ -19,6 +19,7 @@ public class Test {
         final BufferedImage img;
         try {
             img = ImageIO.read(new File("src/test/java/test_image.jpg"));
+            //img = ImageIO.read(new File("/home/max/Downloads/aaa.png"));
 
             ditherer.dither(img);
 

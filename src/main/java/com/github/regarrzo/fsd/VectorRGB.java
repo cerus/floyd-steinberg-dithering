@@ -24,7 +24,7 @@ public class VectorRGB {
     }
 
     public VectorRGB(final int rgb) {
-        final Color color = new Color(rgb);
+        final Color color = new Color(rgb, true);
         this.r = color.getRed();
         this.b = color.getBlue();
         this.g = color.getGreen();
@@ -83,6 +83,16 @@ public class VectorRGB {
         }
 
         return clipped;
-
     }
+
+    @Override
+    public String toString() {
+        return "VectorRGB{" +
+                "r=" + this.r +
+                ", g=" + this.g +
+                ", b=" + this.b +
+                ", a=" + this.a +
+                '}';
+    }
+
 }

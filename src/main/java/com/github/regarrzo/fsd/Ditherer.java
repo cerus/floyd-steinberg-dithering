@@ -21,9 +21,9 @@ public class Ditherer {
     public void dither(final BufferedImage img) {
         for (int y = 0; y < img.getHeight(); y++) {
             for (int x = 0; x < img.getWidth(); x++) {
-                if (img.getRGB(x, y) >> 24 == 0x0) {
+                /*if (img.getRGB(x, y) >> 24 == 0x0) {
                     continue;
-                }
+                }*/
 
                 final VectorRGB current_color = new VectorRGB(img.getRGB(x, y));
                 final VectorRGB closest_match = this.palette.getClosestMatch(current_color);
