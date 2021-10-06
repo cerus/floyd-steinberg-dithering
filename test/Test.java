@@ -1,4 +1,7 @@
-import ditherer
+package com.github.regarrzo.fsd;
+
+import com.github.regarrzo.fsd.ColorPalette;
+import com.github.regarrzo.fsd.Ditherer;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;

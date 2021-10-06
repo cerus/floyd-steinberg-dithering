@@ -1,4 +1,4 @@
-package ditherer;
+package com.github.regarrzo.fsd;
 
 import java.awt.Color;
 
