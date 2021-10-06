@@ -44,7 +44,7 @@ public class VectorRGB {
     }
 
     public VectorRGB add(final VectorRGB other) {
-        return new VectorRGB(this.r + other.r, this.g + other.g, this.b + other.b, this.a - other.a);
+        return new VectorRGB(this.r + other.r, this.g + other.g, this.b + other.b, this.a + other.a);
     }
 
     public int fastDifferenceTo(final VectorRGB other) {

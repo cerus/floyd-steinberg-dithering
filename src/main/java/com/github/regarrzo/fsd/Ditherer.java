@@ -33,12 +33,12 @@ public class Ditherer {
 
                 if (!(x == img.getWidth() - 1)) {
                     img.setRGB(x + 1, y,
-                            ((new VectorRGB(img.getRGB(x + 1, y)).add(error.scalarMultiply((float) 7 / 16)))
+                            ((new VectorRGB(img.getRGB(x + 1, y)).add(error.scalarMultiply(7f / 16f)))
                                     .clip(0, 255).toRGB()));
 
                     if (!(y == img.getHeight() - 1)) {
                         img.setRGB(x + 1, y + 1,
-                                ((new VectorRGB(img.getRGB(x + 1, y + 1)).add(error.scalarMultiply((float) 1 / 16)))
+                                ((new VectorRGB(img.getRGB(x + 1, y + 1)).add(error.scalarMultiply(1f / 16f)))
                                         .clip(0, 255).toRGB()));
                     }
                 }
@@ -46,7 +46,7 @@ public class Ditherer {
                 if (!(y == img.getHeight() - 1)) {
 
                     img.setRGB(x, y + 1,
-                            ((new VectorRGB(img.getRGB(x, y + 1)).add(error.scalarMultiply((float) 3 / 16)))
+                            ((new VectorRGB(img.getRGB(x, y + 1)).add(error.scalarMultiply(3f / 16f)))
                                     .clip(0, 255).toRGB()));
 
                     if (!(x == 0)) {
