@@ -51,7 +51,7 @@ public class Ditherer {
 
                     if (!(x == 0)) {
                         img.setRGB(x - 1, y + 1, ((new VectorRGB(img.getRGB(x - 1, y + 1))
-                                .add(error.scalarMultiply(5 / 16)).clip(0, 255).toRGB())));
+                                .add(error.scalarMultiply(5f / 16f)).clip(0, 255).toRGB())));
 
                     }
                 }
