@@ -49,7 +49,7 @@ public class VectorRGB {
 
     public int fastDifferenceTo(final VectorRGB other) {
         final VectorRGB difference = this.subtract(other);
-        return Math.abs(difference.r) + Math.abs(difference.g) + Math.abs(difference.b);
+        return Math.abs(difference.r) + Math.abs(difference.g) + Math.abs(difference.b) + Math.abs(difference.a);
     }
 
     public VectorRGB scalarMultiply(final float scalar) {
