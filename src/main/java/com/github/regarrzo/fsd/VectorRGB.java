@@ -85,6 +85,10 @@ public class VectorRGB {
         return clipped;
     }
 
+    public int getARGB() {
+        return (a & 255) << 24 | (r & 255) << 16 | (g & 255) << 8 | (b & 255) << 0;
+    }
+
     @Override
     public String toString() {
         return "VectorRGB{" +

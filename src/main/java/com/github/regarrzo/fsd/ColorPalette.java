@@ -1,9 +1,12 @@
 package com.github.regarrzo.fsd;
 
 import java.awt.Color;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ColorPalette {
 
+    private final Map<Integer, VectorRGB> matches = new HashMap<>();
     private final VectorRGB[] colors;
 
     public ColorPalette(final VectorRGB[] colors) {
@@ -19,6 +22,11 @@ public class ColorPalette {
     }
 
     public VectorRGB getClosestMatch(final VectorRGB color, final boolean transparent) {
+        int argb = color.getARGB();
+        if (matches.containsKey(argb)) {
+            return matches.get(argb);
+        }
+
         int minimum_index = 0;
         int minimum_difference = this.colors[0].fastDifferenceTo(color);
 
@@ -35,7 +43,9 @@ public class ColorPalette {
             }
         }
 
-        return this.colors[minimum_index];
+        VectorRGB match = this.colors[minimum_index];
+        matches.put(argb, match);
+        return match;
     }
 
 }
